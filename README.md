@@ -1,6 +1,6 @@
 # SteaMidra on CrossOver
 
-A setup guide for running **SteaMidra** through **CrossOver/Wine**, including the required DLL overrides, ICU libraries, graphics configuration, and optional support for downloading native macOS game builds.
+A setup guide for running **SteaMidra** through **CrossOver/Wine**
 
 
 ---
@@ -9,34 +9,17 @@ A setup guide for running **SteaMidra** through **CrossOver/Wine**, including th
 
 ## 1. Download SteaMidra
 
-Download the latest official **SteaMidra** setup from its GitHub releases page.
-
-
-## 2. Add the `dwmapi` DLL Override
-
-Open **CrossOver** and select the bottle where SteaMidra will be installed.
-
-Open the bottle's **Wine Configuration** and add:
-
-```text
-dwmapi
-```
-
-Apply the change before continuing.
-
----
-
-## 3. Install SteaMidra
+Download the latest official [**SteaMidra**](https://github.com/Midrags/SFF/releases) setup from its GitHub releases page.
 
 Run the SteaMidra installer through CrossOver and complete the installation normally.
 
 ### Important
 
+Do not launch SteaMidra yet.
 At the final screen, **uncheck**:
 
-> Run SteaMidra
+> **Run SteaMidra**
 
-Do not launch SteaMidra yet.
 
 ---
 
@@ -64,7 +47,6 @@ icuin78.dll
 icudt78.dll
 ```
 
-Create a temporary folder and copy those three files into it.
 
 Rename:
 
@@ -82,7 +64,15 @@ SteaMidra/_internal/PyQt6/Qt6/bin/
 
 ---
 
-# Configure CrossOver Graphics
+# 2. Setup CrossOver
+
+Open the bottle's **Wine Configuration** and add:
+
+```text
+dwmapi
+```
+
+Apply the change before continuing.
 
 Open the SteaMidra bottle in CrossOver.
 
@@ -94,9 +84,8 @@ Wine
 
 ---
 
-# Launch SteaMidra
 
-## 1. Run `SteaMidra_GUI.exe`
+## 3. Run SteaMidra
 
 In CrossOver, use **Run Command**.
 
@@ -106,9 +95,6 @@ Navigate to the SteaMidra installation directory and select:
 SteaMidra_GUI.exe
 ```
 
----
-
-## 2. Add the Qt WebEngine environment variable
 
 Before launching the executable, add this environment variable:
 
@@ -130,7 +116,7 @@ Once SteaMidra starts:
 
 ---
 
-# Restore `dwmapi.dll`
+# Replace `dwmapi.dll`
 
 After SteaMidra has been closed, locate:
 
@@ -144,12 +130,12 @@ Replace the existing:
 dwmapi.dll
 ```
 
-with the `dwmapi.dll` from the releases section 
+with the `dwmapi.dll` from the [releases](https://github.com/AirUser-max/SteaMidra_MacOS/releases/tag/dwmapi.dll) 
 
 
 ---
 
-# Final Launch
+# 4. Final Launch
 
 Run:
 
@@ -163,6 +149,4 @@ Use the same environment variable from earlier:
 ```text
 QTWEBENGINE_CHROMIUM_FLAGS=--disable-gpu-compositing
 ```
-
-SteaMidra should now launch using the completed configuration.
 
