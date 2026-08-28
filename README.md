@@ -97,11 +97,11 @@ Before launching the executable, add this environment variable:
 ```text
 QTWEBENGINE_CHROMIUM_FLAGS=--disable-gpu-compositing
 ```
-After SteaMidra launches run **AutoLC**
+### After SteaMidra launches run **AutoLC**
 
-## Replace `dwmapi.dll`
+## Replace dwmapi.dll
 
-After SteaMidra has been closed, locate:
+Locate Steam:
 
 ```text
 Program Files (x86)/Steam/
