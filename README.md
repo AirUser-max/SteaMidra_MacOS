@@ -76,11 +76,7 @@ Apply the change before continuing.
 
 Open the SteaMidra bottle in CrossOver.
 
-Under **Graphics**, select:
-
-```text
-Wine
-```
+Under **Graphics**, select: *Wine*
 
 ---
 
@@ -101,20 +97,7 @@ Before launching the executable, add this environment variable:
 ```text
 QTWEBENGINE_CHROMIUM_FLAGS=--disable-gpu-compositing
 ```
-
-
----
-
-## Run AutoLC
-
-Once SteaMidra starts:
-
-1. Run **AutoLC**.
-2. Wait for AutoLC to finish.
-3. **Completely exit SteaMidra.**
-
-
----
+After SteaMidra launches run **AutoLC**
 
 ## Replace `dwmapi.dll`
 
@@ -135,7 +118,7 @@ with the `dwmapi.dll` from the [releases](https://github.com/AirUser-max/SteaMid
 
 ---
 
-# 4. Final Launch
+## 4. Final Launch
 
 Run:
 
