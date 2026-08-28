@@ -23,7 +23,7 @@ At the final screen, **uncheck**:
 
 ---
 
-# Installing ICU 78.3
+## Installing ICU 78.3
 
 SteaMidra requires the ICU 78.3 runtime libraries.
 
@@ -64,7 +64,7 @@ SteaMidra/_internal/PyQt6/Qt6/bin/
 
 ---
 
-# 2. Setup CrossOver
+## 2. Setup CrossOver
 
 Open the bottle's **Wine Configuration** and add:
 
@@ -105,7 +105,7 @@ QTWEBENGINE_CHROMIUM_FLAGS=--disable-gpu-compositing
 
 ---
 
-# Run AutoLC
+## Run AutoLC
 
 Once SteaMidra starts:
 
@@ -116,7 +116,7 @@ Once SteaMidra starts:
 
 ---
 
-# Replace `dwmapi.dll`
+## Replace `dwmapi.dll`
 
 After SteaMidra has been closed, locate:
 
